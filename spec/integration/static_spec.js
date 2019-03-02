@@ -10,7 +10,14 @@ describe("routes : static", () => {
                 expect(body).toContain("Welcome to Bloccit");
             });
         });
+    });
 
-        it()
+    describe("GET /about", () =>{
+        it("should return status code 200 and have 'About Node Bloccit' in the body of the response", () => {
+            request.get(base, (err, res, body) => {
+                expect(res.statusCode).toBe(200);
+                expect(body).toContain("About Node Bloccit");
+            });
+        });
     });
 });

@@ -5,3 +5,4 @@ const staticController = require("../controllers/staticController");
 module.exports = router;
 
 router.get("/", staticController.index);
+router.get("/about", staticController.about);
